@@ -10,7 +10,13 @@ Run the script to generate the jar and then compile with graalvm.
 bash ./graalvm/native-unix-compile.sh
 ```
 
-If everything goes well, it should generate a `nrepl-graalvm-sample` executable on the root of this project where you can run.
+If everything goes well, it should generate a `nrepl-graalvm-sample` executable on the root of this project where you can run and see:
+
+```
+Evaluated sucessfully: [7]
+```
+
+`
 
 ## License
 
