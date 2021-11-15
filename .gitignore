@@ -25,3 +25,7 @@
 /checkouts
 /classes
 /target
+
+nrepl-graalvm-sample
+nrepl-graalvm-sample.build_artifacts.txt
+reports

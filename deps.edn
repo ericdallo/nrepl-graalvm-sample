@@ -2,4 +2,16 @@
  :deps {org.clojure/clojure {:mvn/version "1.10.3"}
         nrepl/nrepl {:mvn/version "0.9.0-beta5"}}
  :aliases
- {:run-m {:main-opts ["-m" "ericdallo.nrepl-graalvm-sample"]}}}
+ {:run {:main-opts ["-m" "ericdallo.nrepl-graalvm-sample"]}
+  :jar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
+        :exec-fn hf.depstar/uberjar
+        :exec-args {:jar "nrepl-graalvm-sample.jar"
+                    :aot true
+                    :sync-pom true
+                    :jvm-opts ["-server"]
+                    :main-class ericdallo.nrepl-graalvm-sample
+                    :aliases [:native]}}
+  :native {:jvm-opts ["-server"
+                      "-Dclojure.compiler.direct-linking=true"
+                      "-Dclojure.spec.skip-macros=true"]
+           :extra-deps {com.github.clj-easy/graal-build-time {:mvn/version "0.1.4"}}}}}
