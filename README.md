@@ -4,13 +4,15 @@ Sample project that tests [nrepl/nrepl](https://github.com/nrepl/nrepl) usage wi
 
 ## Usage
 
-Run the script to generate the jar and then compile with graalvm.
+1. Build a local jar of [this PR](https://github.com/nrepl/nrepl/pull/258) as it contains the necessary fixes for graalvm compilation.
+
+2. Run the script to generate the jar and then compile with graalvm.
 
 ```bash
 bash ./graalvm/native-unix-compile.sh
 ```
 
-If everything goes well, it should generate a `nrepl-graalvm-sample` executable on the root of this project where you can run and see:
+3. If everything goes well, it should generate a `nrepl-graalvm-sample` executable on the root of this project where you can run and see:
 
 ```
 Evaluated sucessfully: [7]

@@ -1,6 +1,6 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.10.3"}
-        nrepl/nrepl {:mvn/version "0.9.0-beta5"}}
+        nrepl/nrepl {:mvn/version "0.9.0-beta4"}}
  :aliases
  {:run {:main-opts ["-m" "ericdallo.nrepl-graalvm-sample"]}
   :jar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
